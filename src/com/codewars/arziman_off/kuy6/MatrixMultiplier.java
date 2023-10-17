@@ -58,7 +58,6 @@ public class MatrixMultiplier {
         return true;
     }
 
-
     public static void printMatrix(double[][] matrix){
         if (matrix == null){
             return;
