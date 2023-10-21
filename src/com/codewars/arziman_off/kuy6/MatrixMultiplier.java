@@ -72,11 +72,12 @@ public class MatrixMultiplier {
         }
     }
 
-    public static void main(String[] args) {
-        double[][] testMatrix3 = new double[][] { { 1, 2 }, { 3, 4 } };
-        double[][] testMatrix4 = new double[][] { { 5, 6 }, { 7, 8 } };
+//    public static void main(String[] args) {
+//        double[][] testMatrix3 = new double[][] { { 1, 2 }, { 3, 4 } };
+//        double[][] testMatrix4 = new double[][] { { 5, 6 }, { 7, 8 } };
+//
+//        double[][] ansMatrix34 = getMatrixProduct(testMatrix3, testMatrix4);
+//        printMatrix(ansMatrix34);
+//    }
 
-        double[][] ansMatrix34 = getMatrixProduct(testMatrix3, testMatrix4);
-        printMatrix(ansMatrix34);
-    }
 }
