@@ -2,7 +2,7 @@ package com.codewars.arziman_off.kuy6;
 
 import java.util.HashMap;
 import java.util.Map;
-public class uniqueNumberInArray {
+public class UniqueNumberInArray {
     public static double findUniq(double[] arr) {
         Map<Double, Integer> uniqueMap = new HashMap<>();
 
