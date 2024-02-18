@@ -1,4 +1,4 @@
-package com.leetcode.arziman_off.easy;
+package com.leetcode.arziman_off.medium;
 
 // https://leetcode.com/problems/add-two-numbers/description/
 
