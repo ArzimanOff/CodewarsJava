@@ -1,4 +1,5 @@
 package com.leetcode.arziman_off.easy;
+// https://leetcode.com/problems/minimum-additions-to-make-valid-string/description/
 
 public class MergeStringsAlternately {
     public static void main(String[] args) {
