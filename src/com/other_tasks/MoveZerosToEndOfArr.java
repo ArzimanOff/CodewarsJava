@@ -1,7 +1,7 @@
 package com.other_tasks;
 import java.util.Scanner;
 
-public class moveZerosToEndOfArr {
+public class MoveZerosToEndOfArr {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
