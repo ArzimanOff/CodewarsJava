@@ -1,6 +1,7 @@
-package com.other_tasks;
+package com.other_tasks.maze;
 
 import java.util.Scanner;
+
 
 //Алгоритм отрисовки лабиринта по входным данным из stdin
 //Формат входных данных:
@@ -19,8 +20,24 @@ import java.util.Scanner;
 //        1 1 0 1
 //        1 1 1 1
 
+// эталонная квадратная ячейка лабиринта:
+//System.out.println("#".repeat(11));
+//for (int i = 0; i < 3; i++) {
+//    System.out.print("#");
+//    System.out.print(" ".repeat(9));
+//    System.out.print("#");
+//    System.out.println();
+//}
+//System.out.println("#".repeat(11));
+//вывод:
+//###########
+//#         #
+//#         #
+//#         #
+//###########
 
-public class Maze {
+public class Main {
+
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         int N = scanner.nextInt();
@@ -28,38 +45,10 @@ public class Maze {
         int[][] arrVertical = new int[N][M];
         int[][] arrHorizontal = new int[N][M];
         readData(N, M, arrVertical, arrHorizontal);
-        printMaze(N, M, arrVertical, arrHorizontal);
+        Maze maze = new Maze(N, M, arrVertical, arrHorizontal);
     }
 
-    private static void printMaze(int N, int M, int[][] A, int[][] B) {
-        System.out.print("#####".repeat(2));
-        System.out.print("###".repeat(M-2));
-        System.out.println();
 
-        for (int i = 0; i < N*2; i++) {
-            System.out.print("#");
-            for (int j = 0; j < M; j++) {
-                if (i%2 == 0){
-                    if(A[i/2][j] == 1){
-                        System.out.print("   #");
-                    } else {
-                        System.out.print("    ");
-                    }
-                } else {
-                    if (B[i/2][j] == 1){
-                        System.out.print("####");
-                    } else {
-                        if (j == M-1){
-                            System.out.print("   #");
-                        } else {
-                            System.out.print("    ");
-                        }
-                    }
-                }
-            }
-            System.out.println();
-        }
-    }
 
     private static void readData(int N, int M, int[][] arrVertical, int[][] arrHorizontal ) {
         for (int i = 0; i < N; i++) {
