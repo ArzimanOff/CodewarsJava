@@ -47,7 +47,7 @@ public class Main {
 
     static {
         try {
-            fileScanner = new Scanner(new File("src/mazeField.txt"));
+            fileScanner = new Scanner(new File("src/com/other_tasks/maze/mazeField.txt"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
