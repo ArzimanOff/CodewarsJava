@@ -49,7 +49,6 @@ public class Maze {
                 normalizeTheCell(x, y, z, w);
             }
         }
-
         printMatrix(A);
         printField(A);
     }
