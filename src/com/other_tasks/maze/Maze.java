@@ -13,7 +13,7 @@ public class Maze {
         this.arrVertical = arrVertical;
         this.arrHorizontal = arrHorizontal;
         mainArr = new int[2*N + 1][2*M + 1];
-        A = new int[5*N][11*M];
+        A = new int[(N+1) + N*3][(M+1) + M*9];
         defaultFilling(A, 0);
         defaultFilling(mainArr, 1);
         int x = 0;
@@ -32,15 +32,6 @@ public class Maze {
 
             }
         }
-        printMatrix(mainArr);
-
-        for (int i = 0; i < N; i++){
-            for (int j = 0; j < M; j++) {
-                x = 2*i + 1;
-                y = 2*j + 1;
-                System.out.println(x + " " + y);
-            }
-        }
         x = 0;
         y = 0;
         int z = 0;
@@ -50,8 +41,8 @@ public class Maze {
             for (int j = 0; j < M; j++) {
                 x = 2*i + 1;
                 y = 2*j + 1;
-                z = 5*i + 2;
-                w = 11*j + 5;
+                z = 4*i + 2;
+                w = 10*j + 5;
                 if (mainArr[x][y] == 0) {
                     A[z][w] = 2;
                 }
