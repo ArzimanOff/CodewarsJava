@@ -109,7 +109,9 @@ public class Maze {
             int upStart = w - 5;
             int upEnd = w + 5;
             for (; upStart <= upEnd; upStart++){
-                A[up][upStart] = 1;
+                if (upStart%2 ==0){
+                    A[up][upStart] = 1;
+                }
             }
         }
 
@@ -119,7 +121,9 @@ public class Maze {
             int downStart = w - 5;
             int downEnd = w + 5;
             for (; downStart <= downEnd; downStart++){
-                A[down][downStart] = 1;
+                if (downStart%2 ==0){
+                    A[down][downStart] = 1;
+                }
             }
         }
     }

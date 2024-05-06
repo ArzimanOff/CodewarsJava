@@ -44,9 +44,6 @@ public class Main {
     static Scanner fileScanner;
     static Scanner sc = new Scanner(System.in);
 
-
-
-
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("Введите 0, чтобы произвести чтение из файла");
         System.out.println("Введите 1, чтобы произвести чтение из консоли");
@@ -74,6 +71,11 @@ public class Main {
             arrHorizontal = new int[N][M];
             generateVerticalMatrix(N, M, arrVertical);
             generateHorizontalMatrix(N, M, arrHorizontal);
+//            AlgorithmOfEller algorithmOfEller = new AlgorithmOfEller(N, M);
+//            System.out.println("========================");
+//
+//            arrVertical = algorithmOfEller.getArrVertical();
+//            arrHorizontal = algorithmOfEller.getArrHorizontal();
         } else {
             if (ans == 0){
                 System.out.println("Ввведите название файла в текущей директории: ");
