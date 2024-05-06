@@ -59,7 +59,7 @@ public class Maze {
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < cols; j++) {
                 if (Arr[i][j] == 1){
-                    System.out.print("#");
+                    System.out.print("*");
                 } else if (Arr[i][j] == 2) {
                     System.out.print(".");
                 } else {

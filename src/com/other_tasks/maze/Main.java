@@ -45,13 +45,7 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
 
 
-    static {
-        try {
-            fileScanner = new Scanner(new File("src/com/other_tasks/maze/mazeField.txt"));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 
     public static void main(String[] args) throws FileNotFoundException {
         System.out.println("Введите 0, чтобы произвести чтение из файла");
@@ -82,6 +76,15 @@ public class Main {
             generateHorizontalMatrix(N, M, arrHorizontal);
         } else {
             if (ans == 0){
+                System.out.println("Ввведите название файла в текущей директории: ");
+                String input = sc.next();
+                String fileName = "src/com/other_tasks/maze/" + input;
+                System.out.println(fileName);
+                try {
+                    fileScanner = new Scanner(new File(fileName));
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
                 scanner = fileScanner;
             } else if (ans == 1) {
                 scanner = sc;
@@ -148,7 +151,7 @@ public class Main {
                 if (scanner.hasNextInt()){
                     arr[i][j] = scanner.nextInt();
                 } else {
-                    System.err.println("Неверный формат файла, не достаточно данных");
+                    System.err.println("Неверный формат файла, недостаточно данных");
                 }
             }
         }
