@@ -132,7 +132,7 @@ class NaryTree<Integer> {
         System.out.println(depth);
 
         for (int i = depth - 1; i >= 0; i--) {
-            Collections.sort(levelNodes.get(i), (a, b) -> ((Comparable<Integer>)a).compareTo(b));
+            levelNodes.get(i).sort((a, b) -> ((Comparable<Integer>) a).compareTo(b));
             System.out.print((levelNodes.get(i).size()) + " ");
             for (Integer nodeData : levelNodes.get(i)) {
                 System.out.print(nodeData + " ");
