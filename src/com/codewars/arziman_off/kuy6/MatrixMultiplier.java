@@ -72,7 +72,7 @@ public class MatrixMultiplier {
         }
     }
 
-//    public static void main(String[] args) {
+//    public static void com.other_tasks.yandex_kotlin_coderun.main(String[] args) {
 //        double[][] testMatrix3 = new double[][] { { 1, 2 }, { 3, 4 } };
 //        double[][] testMatrix4 = new double[][] { { 5, 6 }, { 7, 8 } };
 //
