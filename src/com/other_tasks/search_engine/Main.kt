@@ -52,7 +52,7 @@ fun addFile(filePath: String, invertedIndex: MutableMap<String, MutableList<Int>
 
     // Читаем содержимое файла и обновляем инвертированный индекс
     file.forEachLine { line ->
-        val words = line.lowercase().split(" ") // Используем регулярное выражение для удаления символов
+        val words = line.toLowerCase().split(" ") // Используем регулярное выражение для удаления символов
         for (word in words) {
             val cleanedWord = word.trim() // Удаляем пробелы
             if (cleanedWord.isNotEmpty()) {
@@ -79,7 +79,7 @@ fun findDocuments(invertedIndex: Map<String, List<Int>>, words: List<String>): L
     var result: Set<Int> = emptySet()
 
     for (word in words) {
-        val docList = invertedIndex[word.lowercase()] // Ищем слово без учета регистра
+        val docList = invertedIndex[word.toLowerCase()] // Ищем слово без учета регистра
 
         if (docList != null) {
             result = if (result.isEmpty()) {
